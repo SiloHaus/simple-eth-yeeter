@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Theme } from "@daohaus/ui";
 
 export const Table = styled.table`
-  width: 100%;
+  width: 65%;
   border-collapse: collapse;
   margin: 6rem;
 `;
