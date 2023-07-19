@@ -9,7 +9,7 @@ export const Table = styled.table`
 
 export const TableHead = styled.thead`
   height: 6rem;
-  padding-left: 10px;
+  padding-left: 20px;
   text-align: left;
   background-color: #663333;
 `;
@@ -17,7 +17,7 @@ export const TableHead = styled.thead`
 export const TableRow = styled.tr`
   height: 5rem;
   &:nth-child(odd) {
-    background-color: #8e5a37;
+    background-color: #4c2e2e;
   }
   
   &:nth-child(even) {
