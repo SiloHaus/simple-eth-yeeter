@@ -34,7 +34,7 @@ export const ProgressSection = ({
     softCapDisp =
       Number(yeetBalance) > Number(TARGETS.SOFT_CAP)
         ? softCapPerc
-        : hardCapDisp;
+        :  (Number(yeetBalance) / Number(TARGETS.MAX_YEET)) * 100;
   }
   
   return (
