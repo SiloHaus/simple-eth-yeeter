@@ -25,5 +25,5 @@ export const TableRow = styled.tr`
 
 export const TableData = styled.td`
   padding: 1rem;
-  text-align: center;
+  text-align: left;
 `;
