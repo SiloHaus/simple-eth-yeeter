@@ -204,8 +204,8 @@ export const Join = () => {
       <img
         src={ABOUTLINKS.hero}
         alt="logo"
-        width="70%"
-        style={{ marginBottom: "20px" }}
+        width="65%"
+        style={{ marginBottom: "50px" }}
       />
 
       <StakeBox>
@@ -270,7 +270,7 @@ export const Join = () => {
 const ExpiryIndicator = ({ expiry }: { expiry: string }) => {
   const expiryDate = formatDistanceToNowFromSeconds(expiry);
   return (
-    <DataIndicator label="Onboarding Expires:" data={expiryDate} size="sm" />
+    <DataIndicator label="Yeet Event Ends:" data={expiryDate} size="sm" />
   );
 };
 
