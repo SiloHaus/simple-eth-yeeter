@@ -9,18 +9,19 @@ export const Table = styled.table`
 
 export const TableHead = styled.thead`
   height: 6rem;
+  padding-left: 10px;
   text-align: left;
-  background-color: ${({ theme }: { theme: Theme }) => theme.secondary.step3};
+  background-color: #663333;
 `;
 
 export const TableRow = styled.tr`
   height: 5rem;
   &:nth-child(odd) {
-    background-color: ${({ theme }: { theme: Theme }) => theme.secondary.step5};
+    background-color: #8e5a37;
   }
   
   &:nth-child(even) {
-    background-color: ${({ theme }: { theme: Theme }) => theme.secondary.step3};
+    background-color: #663333;
   }
 `;
 
