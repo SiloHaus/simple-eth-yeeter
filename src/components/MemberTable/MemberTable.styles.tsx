@@ -11,17 +11,17 @@ export const TableHead = styled.thead`
   height: 6rem;
   padding-left: 20px;
   text-align: left;
-  background-color: #663333;
+  background-color: #8e5a37;
 `;
 
 export const TableRow = styled.tr`
   height: 5rem;
   &:nth-child(odd) {
-    background-color: #4c2e2e;
+    background-color: #764f35;
   }
   
   &:nth-child(even) {
-    background-color: #663333;
+    background-color: #8e5a37;
   }
 `;
 
