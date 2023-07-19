@@ -23,8 +23,8 @@ export const ProgressSection = ({
 
   if (Number(TARGETS.SOFT_CAP) < Number(TARGETS.MAX_YEET)) {
     validCaps = true;
-    softCapReached = Number(yeetBalance) > Number(TARGETS.SOFT_CAP);
-    hardCapReached = Number(yeetBalance) > Number(TARGETS.MAX_YEET);
+    softCapReached = Number(yeetBalance) >= Number(TARGETS.SOFT_CAP);
+    hardCapReached = Number(yeetBalance) >= Number(TARGETS.MAX_YEET);
     const softCapPerc =
       (Number(TARGETS.SOFT_CAP) / Number(TARGETS.MAX_YEET)) * 100; // 100% of soft cap
     hardCapDisp =
@@ -43,14 +43,14 @@ export const ProgressSection = ({
         {validCaps && (
           <DataIndicator
             size="sm"
-            label={`${softCapReached ? "⭐ " : ""}Softcap:`}
+            label={`${softCapReached ? "🚀 " : ""}Softcap:`}
             data={yeetBalance != null ? fromWei(TARGETS.SOFT_CAP) : "--"}
           />
         )}
         {validCaps && (
           <DataIndicator
             size="sm"
-            label={`${hardCapReached ? "⭐ " : ""}Max ${
+            label={`${hardCapReached ? "🚀 " : ""}Max ${
               TARGETS.STAKE_TOKEN_SYMBOL
             }:`}
             data={
