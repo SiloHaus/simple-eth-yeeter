@@ -47,22 +47,12 @@ export const About = () => {
           </Link>
         </ParMd>
         <ParMd>
-          <Bold>Contribute content and code</Bold> looks at open issues and
-          projects in the repo and start to contribute now.{" "}
+          <Bold>Open source Yeeter</Bold> {" "}
           <Link
             href={ABOUTLINKS.github}
             style={{ marginBottom: "2rem" }}
           >
             Repo
-          </Link>
-        </ParMd>
-        <ParMd>
-          <Bold>Open source Yeeter</Bold> {" "}
-          <Link
-            href={ABOUTLINKS.githubOnboarder}
-            style={{ marginBottom: "2rem" }}
-          >
-            DaoHaus Yeeter
           </Link>
         </ParMd>
       </ContentBox>
