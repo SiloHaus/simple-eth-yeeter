@@ -12,6 +12,7 @@ export const TARGETS: {
     SHAMAN_ADDRESS: EthAddress;
     YEET_BANK: string;
     MAX_YEET: string;
+    SOFT_CAP: string;
     CHAIN_ID: ValidNetwork;
     STAKE_TOKEN_NAME: string;
     STAKE_TOKEN_SYMBOL: string;
@@ -34,6 +35,7 @@ export const TARGETS: {
     SHAMAN_ADDRESS: "0x6d98023d9e73708103803818567a5Cc465Bb1486",
     YEET_BANK: "0x51197bda68a2fc4d7af96de76e3f6471786a03d9",
     MAX_YEET: "3000000000000000000",
+    SOFT_CAP: "700000000000000000",
     STAKE_PAUSED: false,
     STAKE_NEXT_START: 0,
 };
