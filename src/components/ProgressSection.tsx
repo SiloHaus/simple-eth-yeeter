@@ -74,7 +74,7 @@ export const ProgressSection = ({
             percentage: `${yeetBalance ? softCapDisp : 0}%`,
           },
           {
-            color: "#663333",
+            color: "rgba(110,51,51,0.98)",
             percentage: `${yeetBalance ? hardCapDisp : 0}%`,
           },
         ]}
