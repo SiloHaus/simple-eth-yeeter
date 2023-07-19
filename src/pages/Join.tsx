@@ -243,7 +243,8 @@ export const Join = () => {
             <MembershipSection tokenBalance={tokenBalance} balance={balance} />
             {TARGETS.STAKE_NEXT_START > Date.now() / 1000 ||
             TARGETS.STAKE_PAUSED ||
-            parseInt(expiry || "0") < Date.now() / 1000 ? (
+            parseInt(expiry || "0") < Date.now() / 1000 ||
+            Number(yeetBalance) > Number(TARGETS.MAX_YEET) ? (
               <Card className="space">
                 <ParMd>
                   Staking is currently paused. Please check back later.
