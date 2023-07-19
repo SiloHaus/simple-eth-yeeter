@@ -18,7 +18,6 @@ export const ProgressSection = ({
 }: {
   yeetBalance?: string | null;
   max?: string | null;
-
 }) => {
   let validCaps, softCapReached, hardCapReached, softCapDisp, hardCapDisp;
 
