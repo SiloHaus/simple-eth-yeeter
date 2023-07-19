@@ -38,7 +38,7 @@ export const About = () => {
           </Link>
         </ParMd>
         <ParMd>
-          <Bold>Go to SiloHaus DAO</Bold> {" "}
+          <Bold>Go to SiloHaus</Bold> {" "}
           <Link
             href={`https://admin.daohaus.fun/#/molochv3/${TARGETS.CHAIN_ID}/${TARGETS.DAO_ADDRESS}`}
             style={{ marginBottom: "2rem" }}
