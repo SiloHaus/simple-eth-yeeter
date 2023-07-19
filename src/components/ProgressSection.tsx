@@ -50,7 +50,9 @@ export const ProgressSection = ({
         {validCaps && (
           <DataIndicator
             size="sm"
-            label={`${hardCapReached ? "⭐ " : ""}Hardcap:`}
+            label={`${hardCapReached ? "⭐ " : ""}Max ${
+              TARGETS.STAKE_TOKEN_SYMBOL
+            }:`}
             data={
               Number(TARGETS.MAX_YEET) / 10 ** TARGETS.STAKE_TOKEN_DECIMALS ||
               "?"
