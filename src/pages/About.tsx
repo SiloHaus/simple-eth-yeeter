@@ -27,7 +27,17 @@ export const About = () => {
             Discord
           </Link>
         </ParMd>
-                <ParMd>
+        <ParMd>
+          <Bold>Read</Bold>
+          {" "}
+          <Link
+            href={`https://mirror.xyz/silohaus.eth`}
+            style={{ marginBottom: "2rem" }}
+          >
+            Articles
+          </Link>
+        </ParMd>
+        <ParMd>
           <Bold>Visit</Bold>
           {" "}
           <Link
