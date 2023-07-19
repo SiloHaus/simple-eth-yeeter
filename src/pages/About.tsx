@@ -43,7 +43,7 @@ export const About = () => {
             href={`https://admin.daohaus.fun/#/molochv3/${TARGETS.CHAIN_ID}/${TARGETS.DAO_ADDRESS}`}
             style={{ marginBottom: "2rem" }}
           >
-            DAO Admin
+            DAO
           </Link>
         </ParMd>
         <ParMd>
