@@ -36,6 +36,7 @@ import { useETH } from "../hooks/useETH";
 import { useERC20 } from "../hooks/useERC20";
 import { ProgressSection } from "../components/ProgressSection";
 import { useSafeETH } from "../hooks/useSafeETH";
+import { MemberTable } from "../components/MemberTable/MemberTable";
 
 const StakeBox = styled.div`
   max-width: 70rem;
@@ -116,9 +117,10 @@ export const Join = () => {
     fetchShape: {
       expiry: true,
       minTribute: true,
+      multiply: true,
+      received: true,
     },
   });
-
 
   const {
     ethData: yeetBankData,
@@ -243,7 +245,8 @@ export const Join = () => {
             <MembershipSection tokenBalance={tokenBalance} balance={balance} />
             {TARGETS.STAKE_NEXT_START > Date.now() / 1000 ||
             TARGETS.STAKE_PAUSED ||
-            parseInt(expiry || "0") < Date.now() / 1000 ? (
+            parseInt(expiry || "0") < Date.now() / 1000 ||
+            Number(yeetBalance) > Number(TARGETS.MAX_YEET) ? (
               <Card className="space">
                 <ParMd>
                   Staking is currently paused. Please check back later.
@@ -263,6 +266,8 @@ export const Join = () => {
           <WarningText>Connect Wallet First</WarningText>
         )}
       </StakeBox>
+
+      {shamanData?.received && <MemberTable memberList={shamanData.received} />}
     </SingleColumnLayout>
   );
 };

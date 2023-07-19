@@ -1,4 +1,7 @@
 import { useQuery } from "react-query";
+import { ethers } from "ethers";
+
+import { HAUS_RPC } from "@daohaus/keychain-utils";
 
 import { ValidNetwork, Keychain } from "@daohaus/keychain-utils";
 
@@ -12,8 +15,7 @@ type FetchShape = {
 const fetchBalanceData = async ({
   userAddress,
   chainId,
-  provider,
-  rpcs,
+  rpcs = HAUS_RPC,
   fetchShape,
 }: {
   userAddress?: string | null;
@@ -23,7 +25,8 @@ const fetchBalanceData = async ({
   fetchShape?: FetchShape;
 }) => {
 
-  if (!provider || !userAddress || !chainId) {
+  if (!userAddress) {
+    console.log("early return");
     return;
   }
 
@@ -32,7 +35,11 @@ const fetchBalanceData = async ({
     const name = "Ethereum";
     const symbol = "ETH";
 
-    const balance = await provider?.getBalance(userAddress);    
+    const rpcUrl = rpcs[chainId];
+
+    const ethersProvider = new ethers.providers.JsonRpcProvider(rpcUrl);
+
+    const balance = await ethersProvider?.getBalance(userAddress);   
 
     const data = {
       decimals,
