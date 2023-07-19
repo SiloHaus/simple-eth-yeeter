@@ -9,22 +9,20 @@ export const Table = styled.table`
 
 export const TableHead = styled.thead`
   height: 6rem;
-  text-align: left;
-  background-color: #764f35;
+  background-color: ${({ theme }: { theme: Theme }) => theme.secondary.step3};
 `;
 
 export const TableRow = styled.tr`
   height: 5rem;
   &:nth-child(odd) {
-    background-color: #6d5341;
+    background-color: ${({ theme }: { theme: Theme }) => theme.secondary.step5};
   }
   
   &:nth-child(even) {
-    background-color: #764f35;
+    background-color: ${({ theme }: { theme: Theme }) => theme.secondary.step3};
   }
 `;
 
 export const TableData = styled.td`
   padding: 1rem;
-  text-align: left;
-`;
+  text-align: center;
