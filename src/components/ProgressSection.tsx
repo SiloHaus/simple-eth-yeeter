@@ -34,7 +34,7 @@ export const ProgressSection = ({
         {yeetBalance && (
           <DataIndicator
             size="sm"
-            label={`Yeeter ${TARGETS.STAKE_TOKEN_SYMBOL} Balance:`}
+            label={`Total ${TARGETS.STAKE_TOKEN_SYMBOL} Yeeted:`}
             data={
               yeetBalance != null
                 ? fromWei(yeetBalance)
@@ -47,7 +47,7 @@ export const ProgressSection = ({
             backgroundColor="black"
             progressSection={[
               {
-                color: "green",
+                color: "rgba(142,90,55,0.98)",
                 percentage: `${
                   yeetBalance ? (Number(yeetBalance) / Number(TARGETS.MAX_YEET)) * 100 : 0
                 }%`
