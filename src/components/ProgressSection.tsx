@@ -44,16 +44,14 @@ export const ProgressSection = ({
         {validCaps && (
           <DataIndicator
             size="sm"
-            label={`${softCapReached ? "⭐ " : ""}Soft Cap:`}
+            label={`${softCapReached ? "⭐ " : ""}Softcap:`}
             data={yeetBalance != null ? fromWei(TARGETS.SOFT_CAP) : "--"}
           />
         )}
         {validCaps && (
           <DataIndicator
             size="sm"
-            label={`${hardCapReached ? "⭐ " : ""}Max ${
-              TARGETS.STAKE_TOKEN_SYMBOL
-            }:`}
+            label={`${hardCapReached ? "⭐ " : ""}Hardcap:`}
             data={
               Number(TARGETS.MAX_YEET) / 10 ** TARGETS.STAKE_TOKEN_DECIMALS ||
               "?"
@@ -63,7 +61,7 @@ export const ProgressSection = ({
         {yeetBalance && (
           <DataIndicator
             size="sm"
-            label={`Yeeter ${TARGETS.STAKE_TOKEN_SYMBOL} Balance:`}
+            label={`Total ${TARGETS.STAKE_TOKEN_SYMBOL} Yeeted:`}
             data={yeetBalance != null ? fromWei(yeetBalance) : "--"}
           />
         )}
@@ -73,11 +71,11 @@ export const ProgressSection = ({
         backgroundColor="black"
         progressSection={[
           {
-            color: "green",
+            color: "rgba(142,90,55,0.98)",
             percentage: `${yeetBalance ? softCapDisp : 0}%`,
           },
           {
-            color: "red",
+            color: "#663333",
             percentage: `${yeetBalance ? hardCapDisp : 0}%`,
           },
         ]}
