@@ -9,6 +9,7 @@ export const Table = styled.table`
 
 export const TableHead = styled.thead`
   height: 6rem;
+  text-align: left;
   background-color: ${({ theme }: { theme: Theme }) => theme.secondary.step3};
 `;
 
@@ -25,5 +26,5 @@ export const TableRow = styled.tr`
 
 export const TableData = styled.td`
   padding: 1rem;
-  text-align: center;
+  text-align: left;
 `;
