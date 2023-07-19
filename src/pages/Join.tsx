@@ -204,7 +204,7 @@ export const Join = () => {
       <img
         src={ABOUTLINKS.hero}
         alt="logo"
-        width="100%"
+        width="70%"
         style={{ marginBottom: "20px" }}
       />
 
