@@ -27,6 +27,16 @@ export const About = () => {
             Discord
           </Link>
         </ParMd>
+                <ParMd>
+          <Bold>Visit</Bold>
+          {" "}
+          <Link
+            href={`https://silo.haus`}
+            style={{ marginBottom: "2rem" }}
+          >
+            Website
+          </Link>
+        </ParMd>
         <ParMd>
           <Bold>Follow us on</Bold>
           {" "}
