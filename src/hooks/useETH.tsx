@@ -26,7 +26,6 @@ const fetchBalanceData = async ({
 }) => {
 
   if (!userAddress) {
-    console.log("early return");
     return;
   }
 
