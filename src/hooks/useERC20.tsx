@@ -19,12 +19,16 @@ const fetchTokenData = async ({
   chainId,
   spenderAddress,
   rpcs,
+  cacheTime = 1000 * 60 * 20,
+  staleTime = 1000 * 60 * 20,
   fetchShape,
 }: {
   tokenAddress: string;
   userAddress?: string | null;
   chainId: ValidNetwork;
   rpcs?: Keychain;
+  cacheTime?: number;
+  staleTime?: number;
   spenderAddress?: string | null;
   fetchShape?: FetchShape;
 }) => {
