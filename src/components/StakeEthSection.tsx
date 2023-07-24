@@ -1,18 +1,20 @@
 import { TARGETS } from "../targetDao";
 import { Button, Checkbox, Input, Label, ParSm } from "@daohaus/ui";
 import { useEffect, useState } from "react";
-import { EthAddress, isNumberish, toBaseUnits } from "@daohaus/utils";
+import { EthAddress, fromWei, isNumberish, toBaseUnits } from "@daohaus/utils";
 import styled from "styled-components";
 
 export const StakeEthSection = ({
   isLoading,
   handleStake,
   balance,
+  minStake,
   address,
   chainId,
 }: {
   isLoading: boolean;
   balance?: string | null;
+  minStake?: string | null;
   handleStake: (wholeAmt: string) => void;
   address: string | undefined;
   chainId: string | undefined;
@@ -22,6 +24,7 @@ export const StakeEthSection = ({
   const [isDocsChecked, setIsDocsChecked] = useState<boolean>(false);
 
   useEffect(() => {
+    
     if (!stkAmt) {
       setValMsg(null);
     } else if (!isNumberish(stkAmt)) {
@@ -33,7 +36,14 @@ export const StakeEthSection = ({
       Number(toBaseUnits(stkAmt, TARGETS.STAKE_TOKEN_DECIMALS))
     ) {
       setValMsg(`Insufficient ${TARGETS.STAKE_TOKEN_SYMBOL} balance`);
-    } else {
+    } else 
+    if (
+      Number(minStake || "0") >
+      Number(toBaseUnits(stkAmt || "0", TARGETS.STAKE_TOKEN_DECIMALS))
+    ) {
+      setValMsg(`Must yeet at least ${fromWei(minStake || "")} ${TARGETS.STAKE_TOKEN_SYMBOL}`);
+    } else
+     {
       setValMsg(null);
     }
   });
