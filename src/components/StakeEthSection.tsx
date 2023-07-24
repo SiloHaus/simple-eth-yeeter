@@ -55,7 +55,7 @@ export const StakeEthSection = ({
       <div className="input-box">
         <Label>
           <>
-            {TARGETS.STAKE_TOKEN_SYMBOL}{" Amount"}
+            {TARGETS.STAKE_TOKEN_SYMBOL}{" Amount (must be 1 ETH or more)"}
           </>
         </Label>
         <Input
