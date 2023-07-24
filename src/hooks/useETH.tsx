@@ -60,8 +60,8 @@ export const useETH = ({
   chainId,
   provider,
   rpcs,
-  cacheTime = 10 * 60 * 20,
-  staleTime = 10 * 60 * 20,
+  cacheTime = 1000 * 60 * 20,
+  staleTime = 1000 * 60 * 20,
   fetchShape = {
     decimals: true,
     name: true,
