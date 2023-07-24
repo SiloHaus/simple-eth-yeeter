@@ -76,7 +76,7 @@ export const StakeEthSection = ({
           value={stkAmt}
           disabled={isLoading}
           full
-          placeholder={"1"}
+          placeholder={"0"}
         />
         {valMsg && <ParSm className="err">{valMsg}</ParSm>}
       </div>
