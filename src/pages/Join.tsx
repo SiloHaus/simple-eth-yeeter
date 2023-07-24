@@ -284,5 +284,5 @@ const MinTributeIndicator = ({ minTribute }: { minTribute: string }) => {
     value: fromWei(minTribute),
     format: "numberShort",
   });
-  return <DataIndicator label="Min Tribute:" data={minTributeEth} size="sm" />;
+  return <DataIndicator label="Min ETH Tribute:" data={minTributeEth} size="sm" />;
 };
