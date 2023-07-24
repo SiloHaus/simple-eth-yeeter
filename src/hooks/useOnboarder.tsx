@@ -78,6 +78,8 @@ export const useOnboarder = ({
   shamanAddress,
   chainId,
   rpcs,
+  cacheTime = 1000 * 60 * 20,
+  staleTime = 1000 * 60 * 20,
   fetchShape = {
     baal: true,
     expiry: true,
@@ -89,8 +91,11 @@ export const useOnboarder = ({
   shamanAddress: string;
   chainId: ValidNetwork;
   rpcs?: Keychain;
+  cacheTime?: number;
+  staleTime?: number;
   fetchShape?: FetchShape;
 }) => {
+  
   const { data, error, ...rest } = useQuery(
     'OnboarderShaman',
     () => {
@@ -103,6 +108,8 @@ export const useOnboarder = ({
     },
     {
       enabled: !!shamanAddress && !!chainId,
+      cacheTime,
+      staleTime,
     }
   );
 
