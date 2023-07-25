@@ -42,7 +42,7 @@ export const TARGETS: {
 
 export const ABOUTLINKS = {
   discord: "https://discord.gg/QpaXn6CFAN",
-  twitter: "https://twitter.com/Silo_Haus/",
+  twitter: "https://twitter.com/Silo_Haus",
   github: "https://github.com/SiloHaus/",
   githubOnboarder: "https://github.com/SiloHaus/simple-eth-yeeter",
   logo_url: "https://media.discordapp.net/attachments/1126954803847770122/1131050067642564639/Silo_Logo_02_Ring.png",
