@@ -15,7 +15,7 @@ type FetchShape = {
 
 const fetchBalanceData = async ({
   chainId,
-  rpcs = HAUS_RPC,
+  rpcs  = HAUS_RPC,
   fetchShape,
 }: {
   chainId: ValidNetwork;
