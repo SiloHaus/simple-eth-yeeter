@@ -37,6 +37,7 @@ import { useERC20 } from "../hooks/useERC20";
 import { ProgressSection } from "../components/ProgressSection";
 import { useSafeETH } from "../hooks/useSafeETH";
 import { MemberTable } from "../components/MemberTable/MemberTable";
+import { HAUS_RPC } from "@daohaus/keychain-utils";
 
 const StakeBox = styled.div`
   max-width: 70rem;
