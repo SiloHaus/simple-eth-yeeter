@@ -79,6 +79,7 @@ const SpinnerBox = styled.div`
   justify-content: center;
   width: 100%;
 `;
+const HAUS_RPC_OV = {...HAUS_RPC,...{"0xa":`https://opt-mainnet.g.alchemy.com/v2/${import.meta.env.VITE_ALCHEMY_KEY}`}}
 export const Join = () => {
   const { address, provider, chainId } = useDHConnect();
   const { fireTransaction } = useTxBuilder();
