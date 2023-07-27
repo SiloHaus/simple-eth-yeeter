@@ -43,7 +43,7 @@ export const ProgressSection = ({
         {validCaps && (
           <DataIndicator
             size="sm"
-            label={`${softCapReached ? "💥 " : ""}Softcap:`}
+            label={`${softCapReached ? "💥 " : ""}Goal:`}
             data={yeetBalance != null ? fromWei(TARGETS.SOFT_CAP) : "--"}
           />
         )}
