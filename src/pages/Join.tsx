@@ -255,7 +255,7 @@ export const Join = () => {
             Number(yeetBalance) >= Number(TARGETS.MAX_YEET) ? (
               <Card className="space">
                 <ParMd>
-                  Staking is currently paused. Please check back later.
+                  Yeeting is currently paused. Please check back later.
                 </ParMd>
               </Card>
             ) : (
