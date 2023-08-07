@@ -43,14 +43,14 @@ export const ProgressSection = ({
         {validCaps && (
           <DataIndicator
             size="sm"
-            label={`${softCapReached ? "💥 " : ""}Goal:`}
+            label={`${softCapReached ? "💥 " : ""}ETH Goal:`}
             data={yeetBalance != null ? fromWei(TARGETS.SOFT_CAP) : "--"}
           />
         )}
         {validCaps && (
           <DataIndicator
             size="sm"
-            label={`${hardCapReached ? "🚀 " : ""}Hardcap:`}
+            label={`${hardCapReached ? "🚀 " : ""}ETH Max:`}
             data={
               Number(TARGETS.MAX_YEET) / 10 ** TARGETS.STAKE_TOKEN_DECIMALS ||
               "?"
